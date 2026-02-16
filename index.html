@@ -63,6 +63,7 @@
             background-size: 24px 24px;
         }
 
+        /* Reverted Scan Line to original state */
         .scan-line {
             width: 100%; height: 2px;
             background: linear-gradient(to bottom, transparent, rgba(250, 204, 21, 0.15), transparent);
@@ -129,6 +130,21 @@
         .bg-theme { background-color: var(--bg); }
         .text-theme { color: var(--text); }
         .card-theme { background-color: var(--card); border-color: var(--card-border); }
+        
+        /* Marquee Animation */
+        .marquee-wrapper {
+            display: flex;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+        .marquee-content {
+            display: flex;
+            animation: marquee 12s linear infinite; /* Speed increased for better "moving" feel */
+        }
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-100%); }
+        }
     </style>
 </head>
 <body class="bg-pattern">
@@ -254,13 +270,13 @@
             </div>
 
             <!-- Marquee 1 -->
-            <div class="absolute bottom-0 left-0 w-full bg-yellow-400 text-black py-2 overflow-hidden border-t-2 border-black z-20">
+            <div class="absolute bottom-0 left-0 w-full bg-yellow-400 text-black py-0.5 overflow-hidden border-y border-black z-20">
                 <div class="marquee-wrapper">
                     <div class="marquee-content">
-                        <span class="font-mono text-[10px] font-bold uppercase tracking-[0.2em]">SYSTEM STATUS: ONLINE // NEURAL LINK: ACTIVE // DEPLOYING LOGIC // UNIT_01 READY // SCROLL FOR DATA // SYSTEM STATUS: ONLINE // NEURAL LINK: ACTIVE // DEPLOYING LOGIC // UNIT_01 READY // SCROLL FOR DATA //</span>
+                        <span class="font-mono text-[9px] font-bold uppercase tracking-[0.2em] px-4">SYSTEM STATUS: ONLINE // NEURAL LINK: ACTIVE // SYSTEM STATUS: ONLINE // NEURAL LINK: ACTIVE // SYSTEM STATUS: ONLINE // NEURAL LINK: ACTIVE // SYSTEM STATUS: ONLINE // NEURAL LINK: ACTIVE //</span>
                     </div>
                     <div class="marquee-content" aria-hidden="true">
-                        <span class="font-mono text-[10px] font-bold uppercase tracking-[0.2em]">SYSTEM STATUS: ONLINE // NEURAL LINK: ACTIVE // DEPLOYING LOGIC // UNIT_01 READY // SCROLL FOR DATA // SYSTEM STATUS: ONLINE // NEURAL LINK: ACTIVE // DEPLOYING LOGIC // UNIT_01 READY // SCROLL FOR DATA //</span>
+                        <span class="font-mono text-[9px] font-bold uppercase tracking-[0.2em] px-4">SYSTEM STATUS: ONLINE // NEURAL LINK: ACTIVE // SYSTEM STATUS: ONLINE // NEURAL LINK: ACTIVE // SYSTEM STATUS: ONLINE // NEURAL LINK: ACTIVE // SYSTEM STATUS: ONLINE // NEURAL LINK: ACTIVE //</span>
                     </div>
                 </div>
             </div>
@@ -321,13 +337,13 @@
         </section>
 
         <!-- Marquee 2 -->
-        <div class="w-full bg-yellow-400 text-black py-2 overflow-hidden border-y-2 border-black relative z-20">
+        <div class="w-full bg-yellow-400 text-black py-0.5 overflow-hidden border-y border-black relative z-20">
             <div class="marquee-wrapper">
                 <div class="marquee-content">
-                    <span class="font-mono text-[10px] font-bold uppercase tracking-[0.2em]">SYSTEM STATUS: ONLINE // NEURAL LINK: ACTIVE // DEPLOYING LOGIC // UNIT_01 READY // SCROLL FOR DATA // SYSTEM STATUS: ONLINE // NEURAL LINK: ACTIVE // DEPLOYING LOGIC // UNIT_01 READY // SCROLL FOR DATA //</span>
+                    <span class="font-mono text-[9px] font-bold uppercase tracking-[0.2em] px-4">SYSTEM STATUS: ONLINE // NEURAL LINK: ACTIVE // SYSTEM STATUS: ONLINE // NEURAL LINK: ACTIVE // SYSTEM STATUS: ONLINE // NEURAL LINK: ACTIVE // SYSTEM STATUS: ONLINE // NEURAL LINK: ACTIVE //</span>
                 </div>
                 <div class="marquee-content" aria-hidden="true">
-                    <span class="font-mono text-[10px] font-bold uppercase tracking-[0.2em]">SYSTEM STATUS: ONLINE // NEURAL LINK: ACTIVE // DEPLOYING LOGIC // UNIT_01 READY // SCROLL FOR DATA // SYSTEM STATUS: ONLINE // NEURAL LINK: ACTIVE // DEPLOYING LOGIC // UNIT_01 READY // SCROLL FOR DATA //</span>
+                    <span class="font-mono text-[9px] font-bold uppercase tracking-[0.2em] px-4">SYSTEM STATUS: ONLINE // NEURAL LINK: ACTIVE // SYSTEM STATUS: ONLINE // NEURAL LINK: ACTIVE // SYSTEM STATUS: ONLINE // NEURAL LINK: ACTIVE // SYSTEM STATUS: ONLINE // NEURAL LINK: ACTIVE //</span>
                 </div>
             </div>
         </div>
@@ -367,6 +383,18 @@
             </div>
         </section>
 
+        <!-- Marquee 3 -->
+        <div class="w-full bg-yellow-400 text-black py-0.5 overflow-hidden border-y border-black relative z-20">
+            <div class="marquee-wrapper">
+                <div class="marquee-content">
+                    <span class="font-mono text-[9px] font-bold uppercase tracking-[0.2em] px-4">SYSTEM STATUS: ONLINE // NEURAL LINK: ACTIVE // SYSTEM STATUS: ONLINE // NEURAL LINK: ACTIVE // SYSTEM STATUS: ONLINE // NEURAL LINK: ACTIVE // SYSTEM STATUS: ONLINE // NEURAL LINK: ACTIVE //</span>
+                </div>
+                <div class="marquee-content" aria-hidden="true">
+                    <span class="font-mono text-[9px] font-bold uppercase tracking-[0.2em] px-4">SYSTEM STATUS: ONLINE // NEURAL LINK: ACTIVE // SYSTEM STATUS: ONLINE // NEURAL LINK: ACTIVE // SYSTEM STATUS: ONLINE // NEURAL LINK: ACTIVE // SYSTEM STATUS: ONLINE // NEURAL LINK: ACTIVE //</span>
+                </div>
+            </div>
+        </div>
+
         <!-- Builds Section -->
         <section id="builds" class="py-24 border-t border-[var(--border)] scroll-reveal bg-[var(--bg-sec)] transition-colors duration-500">
             <div class="container mx-auto px-8">
@@ -391,13 +419,13 @@
         </section>
 
         <!-- Marquee 4 -->
-        <div class="w-full bg-yellow-400 text-black py-2 overflow-hidden border-y-2 border-black relative z-20">
+        <div class="w-full bg-yellow-400 text-black py-0.5 overflow-hidden border-y border-black relative z-20">
             <div class="marquee-wrapper">
                 <div class="marquee-content">
-                    <span class="font-mono text-[10px] font-bold uppercase tracking-[0.2em]">SYSTEM STATUS: ONLINE // NEURAL LINK: ACTIVE // DEPLOYING LOGIC // UNIT_01 READY // SCROLL FOR DATA // SYSTEM STATUS: ONLINE // NEURAL LINK: ACTIVE // DEPLOYING LOGIC // UNIT_01 READY // SCROLL FOR DATA //</span>
+                    <span class="font-mono text-[9px] font-bold uppercase tracking-[0.2em] px-4">SYSTEM STATUS: ONLINE // NEURAL LINK: ACTIVE // SYSTEM STATUS: ONLINE // NEURAL LINK: ACTIVE // SYSTEM STATUS: ONLINE // NEURAL LINK: ACTIVE // SYSTEM STATUS: ONLINE // NEURAL LINK: ACTIVE //</span>
                 </div>
                 <div class="marquee-content" aria-hidden="true">
-                    <span class="font-mono text-[10px] font-bold uppercase tracking-[0.2em]">SYSTEM STATUS: ONLINE // NEURAL LINK: ACTIVE // DEPLOYING LOGIC // UNIT_01 READY // SCROLL FOR DATA // SYSTEM STATUS: ONLINE // NEURAL LINK: ACTIVE // DEPLOYING LOGIC // UNIT_01 READY // SCROLL FOR DATA //</span>
+                    <span class="font-mono text-[9px] font-bold uppercase tracking-[0.2em] px-4">SYSTEM STATUS: ONLINE // NEURAL LINK: ACTIVE // SYSTEM STATUS: ONLINE // NEURAL LINK: ACTIVE // SYSTEM STATUS: ONLINE // NEURAL LINK: ACTIVE // SYSTEM STATUS: ONLINE // NEURAL LINK: ACTIVE //</span>
                 </div>
             </div>
         </div>
@@ -428,13 +456,13 @@
         </section>
 
         <!-- Marquee 5 -->
-        <div class="w-full bg-yellow-400 text-black py-2 overflow-hidden border-y-2 border-black relative z-20">
+        <div class="w-full bg-yellow-400 text-black py-0.5 overflow-hidden border-y border-black relative z-20">
             <div class="marquee-wrapper">
                 <div class="marquee-content">
-                    <span class="font-mono text-[10px] font-bold uppercase tracking-[0.2em]">SYSTEM STATUS: ONLINE // NEURAL LINK: ACTIVE // DEPLOYING LOGIC // UNIT_01 READY // SCROLL FOR DATA // SYSTEM STATUS: ONLINE // NEURAL LINK: ACTIVE // DEPLOYING LOGIC // UNIT_01 READY // SCROLL FOR DATA //</span>
+                    <span class="font-mono text-[9px] font-bold uppercase tracking-[0.2em] px-4">SYSTEM STATUS: ONLINE // NEURAL LINK: ACTIVE // SYSTEM STATUS: ONLINE // NEURAL LINK: ACTIVE // SYSTEM STATUS: ONLINE // NEURAL LINK: ACTIVE // SYSTEM STATUS: ONLINE // NEURAL LINK: ACTIVE //</span>
                 </div>
                 <div class="marquee-content" aria-hidden="true">
-                    <span class="font-mono text-[10px] font-bold uppercase tracking-[0.2em]">SYSTEM STATUS: ONLINE // NEURAL LINK: ACTIVE // DEPLOYING LOGIC // UNIT_01 READY // SCROLL FOR DATA // SYSTEM STATUS: ONLINE // NEURAL LINK: ACTIVE // DEPLOYING LOGIC // UNIT_01 READY // SCROLL FOR DATA //</span>
+                    <span class="font-mono text-[9px] font-bold uppercase tracking-[0.2em] px-4">SYSTEM STATUS: ONLINE // NEURAL LINK: ACTIVE // SYSTEM STATUS: ONLINE // NEURAL LINK: ACTIVE // SYSTEM STATUS: ONLINE // NEURAL LINK: ACTIVE // SYSTEM STATUS: ONLINE // NEURAL LINK: ACTIVE //</span>
                 </div>
             </div>
         </div>
@@ -463,13 +491,13 @@
         </section>
 
         <!-- Marquee 6 -->
-        <div class="w-full bg-yellow-400 text-black py-2 overflow-hidden border-y-2 border-black relative z-20">
+        <div class="w-full bg-yellow-400 text-black py-0.5 overflow-hidden border-y border-black relative z-20">
             <div class="marquee-wrapper">
                 <div class="marquee-content">
-                    <span class="font-mono text-[10px] font-bold uppercase tracking-[0.2em]">SYSTEM STATUS: ONLINE // NEURAL LINK: ACTIVE // DEPLOYING LOGIC // UNIT_01 READY // SCROLL FOR DATA // SYSTEM STATUS: ONLINE // NEURAL LINK: ACTIVE // DEPLOYING LOGIC // UNIT_01 READY // SCROLL FOR DATA //</span>
+                    <span class="font-mono text-[9px] font-bold uppercase tracking-[0.2em] px-4">SYSTEM STATUS: ONLINE // NEURAL LINK: ACTIVE // SYSTEM STATUS: ONLINE // NEURAL LINK: ACTIVE // SYSTEM STATUS: ONLINE // NEURAL LINK: ACTIVE // SYSTEM STATUS: ONLINE // NEURAL LINK: ACTIVE //</span>
                 </div>
                 <div class="marquee-content" aria-hidden="true">
-                    <span class="font-mono text-[10px] font-bold uppercase tracking-[0.2em]">SYSTEM STATUS: ONLINE // NEURAL LINK: ACTIVE // DEPLOYING LOGIC // UNIT_01 READY // SCROLL FOR DATA // SYSTEM STATUS: ONLINE // NEURAL LINK: ACTIVE // DEPLOYING LOGIC // UNIT_01 READY // SCROLL FOR DATA //</span>
+                    <span class="font-mono text-[9px] font-bold uppercase tracking-[0.2em] px-4">SYSTEM STATUS: ONLINE // NEURAL LINK: ACTIVE // SYSTEM STATUS: ONLINE // NEURAL LINK: ACTIVE // SYSTEM STATUS: ONLINE // NEURAL LINK: ACTIVE // SYSTEM STATUS: ONLINE // NEURAL LINK: ACTIVE //</span>
                 </div>
             </div>
         </div>
